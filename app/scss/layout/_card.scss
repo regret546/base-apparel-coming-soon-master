@@ -1,0 +1,67 @@
+.card {
+  max-width: 500px;
+  display: grid;
+  gap: 2rem;
+  &__logo {
+    width: 100%;
+    margin: 0 2rem;
+  }
+
+  &__main {
+    min-width: 300px;
+    text-align: center;
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+    &_info {
+      margin: 0 1.5rem;
+      h1 {
+        margin-top: 1rem;
+        text-transform: uppercase;
+        line-height: 4rem;
+        font-weight: var(--fw--regular);
+        font-size: 3.5rem;
+        span {
+          font-weight: var(--fw--bold1);
+          color: var(--clr--dark-grayish-red);
+        }
+      }
+
+      p {
+        font-weight: var(--fw--bold1);
+      }
+
+      form {
+        position: relative;
+        input {
+          width: 100%;
+          outline: none;
+          border: none;
+          border: 1px solid var(--clr--desaturated-red);
+          border-radius: 2rem;
+          padding: 0.8rem;
+        }
+        button {
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          cursor: pointer;
+          display: grid;
+          place-items: center;
+          width: 80px;
+          border: none;
+          background-image: var(--clr--gradient2);
+          border-radius: 2rem;
+          padding: 0.9rem;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

@@ -74,8 +74,12 @@ h6 {
   /* Neutral */
   --clr--dark-grayish-red: hsl(0, 6%, 24%);
   /*  Gradient */
-  --clr--gradient1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-  -clr--gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  --clr--gradient1: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --clr--gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
 :root {
@@ -85,4 +89,76 @@ h6 {
   --fw--regular: 300;
   --fw--bold1: 400;
   --fw--bold2: 600;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff--primary);
+  font-weight: var(--fw--regular);
+  color: var(--clr--desaturated-red);
+  background-image: var(--clr--gradient1);
+}
+
+.card {
+  max-width: 500px;
+  display: grid;
+  gap: 2rem;
+}
+.card__logo {
+  width: 100%;
+  margin: 0 2rem;
+}
+.card__main {
+  min-width: 300px;
+  text-align: center;
+}
+.card__main_image img {
+  width: 100%;
+}
+.card__main_info {
+  margin: 0 1.5rem;
+}
+.card__main_info h1 {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  line-height: 4rem;
+  font-weight: var(--fw--regular);
+  font-size: 3.5rem;
+}
+.card__main_info h1 span {
+  font-weight: var(--fw--bold1);
+  color: var(--clr--dark-grayish-red);
+}
+.card__main_info p {
+  font-weight: var(--fw--bold1);
+}
+.card__main_info form {
+  position: relative;
+}
+.card__main_info form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid var(--clr--desaturated-red);
+  border-radius: 2rem;
+  padding: 0.8rem;
+}
+.card__main_info form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  border: none;
+  background-image: var(--clr--gradient2);
+  border-radius: 2rem;
+  padding: 0.9rem;
+}
+.card__main_info form button:hover {
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff--primary);
+  font-weight: var(--fw--regular);
+  color: var(--clr--desaturated-red);
+  background-image: var(--clr--gradient1);
+}
