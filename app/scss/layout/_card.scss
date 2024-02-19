@@ -1,5 +1,6 @@
+@use "../layout/util/" as u;
+
 .card {
-  max-width: 500px;
   display: grid;
   gap: 2rem;
   &__logo {
@@ -60,6 +61,48 @@
           &:hover {
             opacity: 0.8;
           }
+        }
+      }
+    }
+  }
+
+  @include u.breakpoints(medium) {
+    position: relative;
+    min-width: 100vh;
+    width: 100%;
+    min-height: 100vh;
+
+    &__logo {
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      margin: 0;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
+    &__main {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      width: 100%;
+
+      &_image {
+        order: 2;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+      &_info {
+        margin-top: auto;
+        margin-bottom: auto;
+        order: 1;
+        display: grid;
+        place-items: center;
+
+        & > * {
+          width: 450px;
         }
       }
     }

@@ -102,7 +102,6 @@ body {
 }
 
 .card {
-  max-width: 500px;
   display: grid;
   gap: 2rem;
 }
@@ -161,4 +160,43 @@ body {
 }
 .card__main_info form button:hover {
   opacity: 0.8;
+}
+@media only screen and (min-width: 43.75em) {
+  .card {
+    position: relative;
+    min-width: 100vh;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .card__logo {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  .card__main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+  }
+  .card__main_image {
+    order: 2;
+  }
+  .card__main_image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+  .card__main_info {
+    margin-top: auto;
+    margin-bottom: auto;
+    order: 1;
+    display: grid;
+    place-items: center;
+  }
+  .card__main_info > * {
+    width: 450px;
+  }
 }/*# sourceMappingURL=style.css.map */
