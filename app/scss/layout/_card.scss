@@ -2,21 +2,33 @@
 
 .card {
   display: grid;
-  gap: 2rem;
+  min-height: 100vh;
+  width: 100%;
   &__logo {
+    display: grid;
+    align-items: center;
     width: 100%;
     margin: 0 2rem;
+    img {
+      object-fit: cover;
+    }
   }
 
   &__main {
     min-width: 300px;
     text-align: center;
+    justify-items: center;
+    display: grid;
     &_image {
+      width: 100%;
       img {
+        object-fit: cover;
+        height: 100%;
         width: 100%;
       }
     }
     &_info {
+      max-width: 450px;
       margin: 0 1.5rem;
       h1 {
         margin-top: 1rem;
@@ -67,42 +79,54 @@
   }
 
   @include u.breakpoints(medium) {
+    display: grid;
     position: relative;
     min-width: 100vh;
     width: 100%;
     min-height: 100vh;
 
     &__logo {
+      display: grid;
+      justify-items: start;
       position: absolute;
+      width: 60%;
       height: 50px;
-      width: 100%;
-      margin: 0;
-      margin-top: 2rem;
-      margin-left: 2rem;
+      margin: 3rem;
+      padding-left: 6%;
     }
 
     &__main {
       display: grid;
+      justify-items: start;
       grid-template-columns: 60% 40%;
       width: 100%;
 
       &_image {
         order: 2;
-
-        img {
-          object-fit: cover;
-          height: 100%;
-        }
       }
       &_info {
-        margin-top: auto;
-        margin-bottom: auto;
-        order: 1;
+        max-width: 100%;
         display: grid;
-        place-items: center;
+        gap: 2rem;
+        text-align: left;
+        margin: auto 3rem;
+        padding-left: 10%;
+        order: 1;
 
         & > * {
-          width: 450px;
+          width: 400px;
+        }
+
+        h1 {
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+
+        input {
+          font-size: 1.3rem;
         }
       }
     }
