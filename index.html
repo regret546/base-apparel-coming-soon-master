@@ -50,13 +50,18 @@
           <form action="">
             <input
               type="text"
+              id="emailInput"
               name="email"
               for="email"
               placeholder="Email Address"
             />
-            <button class="btn-submit">
+            <div class="errorImg" id="errorImg">
+              <img src="images/icon-error.svg" alt="error" />
+            </div>
+            <button class="btn-submit" id="submitBtn">
               <img src="images/icon-arrow.svg" alt="" />
             </button>
+            <p class="errorText" id="errorText"></p>
           </form>
         </div>
       </section>

@@ -21,6 +21,15 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 /*
     5. Improve media defaults
   */
@@ -40,6 +49,14 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 /*
     7. Avoid text overflows
