@@ -1,3 +1,5 @@
+@use "../layout/util/" as u;
+
 body {
   min-height: 100vh;
   display: grid;
@@ -6,4 +8,9 @@ body {
   font-weight: var(--fw--regular);
   color: var(--clr--desaturated-red);
   background-image: var(--clr--gradient1);
+
+  @include u.breakpoints(medium) {
+    background: url(/images/bg-pattern-desktop.svg) no-repeat;
+    background-size: 100% 60%;
+  }
 }

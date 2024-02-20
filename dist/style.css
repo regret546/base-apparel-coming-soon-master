@@ -117,6 +117,12 @@ body {
   color: var(--clr--desaturated-red);
   background-image: var(--clr--gradient1);
 }
+@media only screen and (min-width: 43.75em) {
+  body {
+    background: url(/images/bg-pattern-desktop.svg) no-repeat;
+    background-size: 100% 60%;
+  }
+}
 
 .card {
   display: grid;
@@ -233,6 +239,7 @@ body {
     height: 50px;
     margin: 3rem;
     padding-left: 6%;
+    padding-top: 5rem;
   }
   .card__main {
     display: grid;
