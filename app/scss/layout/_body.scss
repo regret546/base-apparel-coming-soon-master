@@ -11,6 +11,6 @@ body {
 
   @include u.breakpoints(medium) {
     background: url(/images/bg-pattern-desktop.svg) no-repeat;
-    background-size: 100% 60%;
+    background-size: cover;
   }
 }
